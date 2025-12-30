@@ -25,4 +25,3 @@ It is designed to strengthen core JavaScript and DOM manipulation skills.
 
 ## Project Status
 In progress
-in
