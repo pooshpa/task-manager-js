@@ -13,12 +13,23 @@ function addTask() {
   }
 
   const li = document.createElement("li");
-  li.textContent = taskText;
+  const span = document.createElement("span");
+  span.textContent = taskText;
 
-  li.addEventListener("click", () => {
-    li.classList.toggle("completed");
+  span.addEventListener("click", () => {
+    span.classList.toggle("completed");
   });
 
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "DELETE";
+
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.appendChild(span);
+  li.appendChild(deleteBtn);
   taskList.appendChild(li);
+
   taskInput.value = "";
 }
